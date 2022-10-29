@@ -36,4 +36,4 @@ jobs:
             GITHUB_TOKEN_PUBLIC=${{ secrets.GH_TOKEN_PUBLIC }}
           platforms: linux/amd64
           push: true
-          tags: ${{ env.REPO }}:81
+          tags: ${{ env.REPO }}/php:81
