@@ -5,6 +5,8 @@ ENV XDEBUG_CLIENT_HOST=${XDEBUG_CLIENT_HOST:-172.17.0.1}
 
 USER root
 
+ARG PHP_VERSION=81
+
 RUN apk add --no-cache --update \
         php${PHP_VERSION}-gd \
         php${PHP_VERSION}-xml \

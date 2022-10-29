@@ -12,6 +12,8 @@ ENV PHP_FPM_TYPE=${PHP_FPM_TYPE} \
 
 USER root
 
+ARG PHP_VERSION=81
+
 RUN apk add --no-cache --update \
     nginx \
     php${PHP_VERSION}-fpm

@@ -3,6 +3,8 @@ FROM ghcr.io/faceoffdev/workspace/php:${PHP_VERSION}-dev
 
 USER root
 
+ARG PHP_VERSION=81
+
 RUN apk add --no-cache --update \
     nginx \
     php${PHP_VERSION}-fpm
