@@ -43,8 +43,7 @@ RUN apk add --no-cache --update \
     && mkdir -p /app \
     && rm -rf /tmp/* \
     /var/{cache,log}/* \
-    && ln -s /usr/bin/php${PHP_VERSION} /usr/bin/php \
-    && ln -s /usr/bin/php-fpm${PHP_VERSION} /usr/bin/php-fpm
+    && ln -s /usr/bin/php${PHP_VERSION} /usr/bin/php
 
 COPY rootfs /
 

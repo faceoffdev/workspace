@@ -16,7 +16,8 @@ ARG PHP_VERSION=81
 
 RUN apk add --no-cache --update \
     nginx \
-    php${PHP_VERSION}-fpm
+    php${PHP_VERSION}-fpm \
+    && ln -s /usr/bin/php-fpm${PHP_VERSION} /usr/bin/php-fpm
 
 COPY rootfs /
 

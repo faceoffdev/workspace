@@ -7,7 +7,8 @@ ARG PHP_VERSION=81
 
 RUN apk add --no-cache --update \
     nginx \
-    php${PHP_VERSION}-fpm
+    php${PHP_VERSION}-fpm \
+    && ln -s /usr/bin/php-fpm${PHP_VERSION} /usr/bin/php-fpm
 
 COPY rootfs /
 
@@ -18,7 +19,8 @@ USER ${USER}
 
 COPY --chown=${USER}:${USER} app ${WORKDIR}
 
-ENV PHP_OPCACHE_VALIDATE_TIMESTAMPS=1
+ENV PHP_OPCACHE_VALIDATE_TIMESTAMPS=1 \
+    PHP_OPCACHE_JIT_BUFFER_SIZE=0
 
 EXPOSE 8080
 
