@@ -134,7 +134,7 @@ jobs:
           push: true
           tags: ${{ env.REPO }}/php:81-dev
 
-  php81-nginx-dev:
+  php81-dev-nginx:
     runs-on: ubuntu-latest
     needs: php81-dev
     steps:
@@ -166,7 +166,7 @@ jobs:
           push: true
           tags: ${{ env.REPO }}/php-nginx:81-dev
 
-  php81-cron-dev:
+  php81-dev-cron:
     runs-on: ubuntu-latest
     needs: php81-dev
     steps:
