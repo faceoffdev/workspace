@@ -1,4 +1,4 @@
-name: Build
+name: Build PHP
 on:
   - workflow_dispatch
 
