@@ -31,7 +31,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          file: ./.docker/php/Dockerfile
+          file: ./php/php/Dockerfile
           build-args: |
             GITHUB_TOKEN_PUBLIC=${{ secrets.GH_TOKEN_PUBLIC }}
           platforms: linux/amd64
