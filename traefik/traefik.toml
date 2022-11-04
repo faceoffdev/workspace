@@ -28,4 +28,4 @@
 [certificatesResolvers.letsencrypt.acme]
   email = "vadym@internet.ru"
   storage = "acme.json"
-  [certificatesResolvers.letsencrypt.acme.dnsChallenge]
+  [certificatesResolvers.letsencrypt.acme.tlsChallenge]
