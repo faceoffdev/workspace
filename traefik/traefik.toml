@@ -26,6 +26,7 @@
     defaultMode = "keep"
 
 [certificatesResolvers.letsencrypt.acme]
-  email = "vadym@fluxmaster.ru"
+  email = "vadym@internet.ru"
   storage = "acme.json"
-  [certificatesResolvers.letsencrypt.acme.tlsChallenge]
+  [certificatesResolvers.letsencrypt.acme.httpChallenge]
+    entryPoint = "web"
