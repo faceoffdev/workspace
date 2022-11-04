@@ -25,9 +25,7 @@
   [accessLog.fields.headers]
     defaultMode = "keep"
 
-[acme]
-  email = "vadym@internet.ru"
+[certificatesResolvers.letsencrypt.acme]
+  email = "vadym@fluxmaster.ru"
   storage = "acme.json"
-  entryPoint = "websecure"
-  onHostRule = true
-  onDemand = false
+  [certificatesResolvers.letsencrypt.acme.tlsChallenge]
