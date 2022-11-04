@@ -29,4 +29,3 @@
   email = "vadym@internet.ru"
   storage = "acme.json"
   [certificatesResolvers.letsencrypt.acme.dnsChallenge]
-    provider = "route53"
