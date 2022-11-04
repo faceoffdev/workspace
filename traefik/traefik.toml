@@ -28,6 +28,5 @@
 [certificatesResolvers.letsencrypt.acme]
   email = "vadym@internet.ru"
   storage = "acme.json"
-  caServer = "https://acme-v02.api.letsencrypt.org/directory"
-  [certificatesResolvers.letsencrypt.acme.tlschallenge]
-    entryPoint = "websecure"
+  [certificatesResolvers.letsencrypt.acme.dnsChallenge]
+    provider = "route53"
