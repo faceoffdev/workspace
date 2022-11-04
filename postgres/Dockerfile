@@ -1,15 +1,15 @@
 ARG POSTGRES_VERSION=15.0
-ARG ALPINE_VERSION=3.16
-FROM postgres:${POSTGRES_VERSION}-alpine${ALPINE_VERSION}
+FROM postgres:${POSTGRES_VERSION}
 
 ARG POSTGRES_VERSION=15
 
 ENV TZ 'Europe/Moscow'
-    RUN echo $TZ > /etc/timezone && \
-    apt-get update && apt-get install -y tzdata
+RUN echo $TZ > /etc/timezone  \
+    && apt update  \
+    && apt install -y tzdata
 
-RUN apt-get update \
-    && apt-get -y install \
+RUN apt update \
+    && apt -y install \
         postgresql-${POSTGRES_VERSION}-repack
 
 # - Set the locale

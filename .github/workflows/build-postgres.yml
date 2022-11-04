@@ -34,7 +34,6 @@ jobs:
           file: ./postgres/Dockerfile
           build-args: |
             POSTGRES_VERSION=15.0
-            ALPINE_VERSION=3.16
           platforms: linux/amd64
           push: true
           tags: ${{ env.REPO }}/postgres:15
