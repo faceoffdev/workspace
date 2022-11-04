@@ -33,7 +33,7 @@ jobs:
           context: ./postgres/
           file: ./postgres/Dockerfile
           build-args: |
-            POSTGRES_VERSION=15.0
+            POSTGRES_VERSION=15
           platforms: linux/amd64
           push: true
           tags: ${{ env.REPO }}/postgres:15
