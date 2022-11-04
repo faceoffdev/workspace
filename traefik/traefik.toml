@@ -24,3 +24,10 @@
 
   [accessLog.fields.headers]
     defaultMode = "keep"
+
+[acme]
+  email = "vadym@internet.ru"
+  storage = "acme.json"
+  entryPoint = "websecure"
+  onHostRule = true
+  onDemand = false
