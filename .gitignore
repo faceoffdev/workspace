@@ -1,2 +1,11 @@
 .idea/
+.data/*
+!.data/.gitkeep
+!.data/tmp/
+.data/tmp/*
+!.data/tmp/.gitkeep
+
+.env
+.DS_Store
+
 */*/docker-compose.yml
