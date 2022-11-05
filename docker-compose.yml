@@ -30,6 +30,14 @@ services:
       timeout: 5s
       retries: 5
 
+  ### Redis #################################################
+  redis_lru:
+    image: redis:7
+    pull_policy: always
+    restart: always
+    volumes:
+      - ${DATA_PATH}/redis_lru:/data
+
   ### Traefik #################################################
   proxy:
     image: traefik:latest
