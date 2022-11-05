@@ -7,5 +7,6 @@
 
 .env
 .DS_Store
+traefik/acme.json
 
 */*/docker-compose.yml
