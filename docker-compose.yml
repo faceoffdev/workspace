@@ -13,7 +13,7 @@ services:
     restart: always
     pull_policy: always
     ports:
-      - "5432:5432"
+      - "8524:5432"
     volumes:
       - ${DATA_PATH}/postgres:/var/lib/postgresql/data
       - ${DATA_PATH}/tmp:/tmp/sql
@@ -37,6 +37,16 @@ services:
     restart: always
     volumes:
       - ${DATA_PATH}/redis_lru:/data
+
+  ### Clickhouse server ######################################
+  clickhouse:
+    image: yandex/clickhouse-server
+    environment:
+      TZ: "Europe/Moscow"
+    ports:
+      - "8525:8123"
+    volumes:
+      - ${DATA_PATH}/clickhouse:/var/lib/clickhouse
 
   ### Traefik #################################################
   proxy:
