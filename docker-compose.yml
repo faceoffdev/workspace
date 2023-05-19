@@ -49,7 +49,7 @@ services:
       - ${DATA_PATH}/clickhouse:/var/lib/clickhouse
 
   grafana:
-    image: grafana/grafana:latest
+    image: grafana/grafana-oss
     ports:
       - "8500:3000"
     volumes:
