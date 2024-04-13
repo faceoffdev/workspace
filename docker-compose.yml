@@ -39,25 +39,25 @@ services:
       - ${DATA_PATH}/redis_lru:/data
 
   ### Clickhouse server ######################################
-  clickhouse:
-    image: yandex/clickhouse-server
-    environment:
-      TZ: "Europe/Moscow"
-    ports:
-      - "8525:8123"
-    volumes:
-      - ${DATA_PATH}/clickhouse:/var/lib/clickhouse
+  #clickhouse:
+  #  image: yandex/clickhouse-server
+  #  environment:
+  #    TZ: "Europe/Moscow"
+  #  ports:
+  #    - "8525:8123"
+  #  volumes:
+  #    - ${DATA_PATH}/clickhouse:/var/lib/clickhouse
 
-  grafana:
-    image: grafana/grafana-oss
-    ports:
-      - "8500:3000"
-    volumes:
-      - ${DATA_PATH}/grafana:/var/lib/grafana
-    environment:
-      - GF_SECURITY_ADMIN_USER=${ADMIN_USER}
-      - GF_SECURITY_ADMIN_PASSWORD=${ADMIN_PASSWORD}
-      - GF_USERS_ALLOW_SIGN_UP=false
+  #grafana:
+  #  image: grafana/grafana-oss
+  #  ports:
+  #    - "8500:3000"
+  #  volumes:
+  #    - ${DATA_PATH}/grafana:/var/lib/grafana
+  #  environment:
+  #    - GF_SECURITY_ADMIN_USER=${ADMIN_USER}
+  #    - GF_SECURITY_ADMIN_PASSWORD=${ADMIN_PASSWORD}
+  #    - GF_USERS_ALLOW_SIGN_UP=false
 
   ### Traefik #################################################
   proxy:
