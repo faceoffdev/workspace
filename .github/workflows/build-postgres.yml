@@ -7,7 +7,7 @@ env:
   GIT_USER: faceoffdev
 
 jobs:
-  postgres15:
+  postgres17:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -33,7 +33,7 @@ jobs:
           context: ./postgres/
           file: ./postgres/Dockerfile
           build-args: |
-            POSTGRES_VERSION=15
+            POSTGRES_VERSION=17
           platforms: linux/amd64
           push: true
-          tags: ${{ env.REPO }}/postgres:15
+          tags: ${{ env.REPO }}/postgres:17
